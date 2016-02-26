@@ -549,7 +549,8 @@ public class HdfsState implements State {
             this.options.execute(tuples);
         } catch (IOException e) {
             LOG.warn("Failing batch due to IOException.", e);
-            throw new FailedException(e);
+	    //            throw new FailedException(e);
+	    throw new RuntimeException(e);
         }
     }
 
